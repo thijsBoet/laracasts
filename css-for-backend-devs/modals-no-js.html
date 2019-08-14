@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Modal example</title>
+<style>
+
+.overlay {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.overlay:target{
+  visibility: visible;
+}
+
+.modal {
+  position: relative;
+  width: 600px;
+  max-width: 80%;
+  background: white;
+  border-radius: 8px;
+  padding: 1em 2em;
+}
+
+.modal .close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: grey;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif
+}
+
+.hide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+
+</style>
+</head>
+
+
+<body>
+
+  <a href="#join-modal">Join</a>
+
+  <div id="join-modal" class="overlay">
+    <a class="hide" href="#"></a>
+    <div class="modal">
+      <h1>Pick a plan</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed molestias quos architecto similique voluptatibus. Non corporis sequi voluptatum voluptatem est quas ad nobis, quod totam.</p>
+      <a class="close" href="#">x</a>
+    </div>
+  </div>
+
+
+</section>
+</body>
+</html>

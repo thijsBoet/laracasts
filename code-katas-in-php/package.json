@@ -1,0 +1,35 @@
+{
+  "name": "code-katas-in-php",
+  "version": "1.0.0",
+  "description": "php katas in php from laracasts",
+  "main": "index.js",
+  "dependencies": {
+    "gulp-notify": "^3.2.0",
+    "gulp-phpspec": "^0.5.5",
+    "gulp-run": "^1.7.1"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "lodash": "^4.17.15"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thijsBoet/laracasts.git"
+  },
+  "keywords": [
+    "php",
+    "TDD",
+    "katas",
+    "phpspec",
+    "gulp"
+  ],
+  "author": "matthijs boet",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thijsBoet/laracasts/issues"
+  },
+  "homepage": "https://github.com/thijsBoet/laracasts#readme"
+}

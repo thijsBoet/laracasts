@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>structure-resets-flexbox</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+<style>
+body{
+  font-family: 'Open Sans', sans-serif;
+}
+
+header {
+  background-image: linear-gradient(to right, #3E547A, #5F80BA);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header h1 {
+  margin-top: 0;
+  color: #fff;
+  font-size: 1.6em;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  color: #fff;
+  padding-bottom: 50px;
+}
+
+.header-top a {
+  color: inherit;
+}
+
+.logo-main {
+  font-family: "Arial Black", Gadget, sans-serif;
+}
+
+.logo-sup{
+  font-family: "Courier New", Courier, monospace;
+  vertical-align: super;
+  font-size: smaller
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+}
+
+nav > a {
+  padding-left: 10px;
+  padding-right: 10px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, .5);
+}
+
+a {
+  text-decoration: none;
+  color: #222;
+}
+
+a:hover {
+  color: #fff;
+}
+
+.section {
+  padding: 30px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.col{
+  flex: 1;
+  padding: 10px;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(62,84,122,0.16), 0 3px 6px rgba(62,84,122,0.23);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  font-weight: bold;
+  color: #3E547A;
+  padding: 20px 30px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  -webkit-transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  -moz-transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  -ms-transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  -o-transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.box:hover {
+  box-shadow: 0 19px 38px rgba(62,84,122,0.30), 0 15px 12px rgba(62,84,122,0.22);
+}
+</style>
+
+</head>
+<body>
+
+<header class="section">
+  <div class="container">
+    <div class="header-top">
+      <h1>
+        <span class="logo-main">PHP </span>
+        <span class="logo-sup"> 24.dev</span>
+      </h1>
+      <a href="#">Sign in</a>
+    </div>
+    <nav>
+      <a href="#">PORTFOLIO</a>
+      <a href="#">BLOG</a>
+      <a href="#">ABOUT</a>
+      <a href="#">CONTACT</a>
+    </nav>
+  </div>
+</header>
+
+<main class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="box">PORTFOLIO</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+          <div class="box">ABOUT</div>
+        </div>
+        <div class="col">
+            <div class="box">BLOG</div>
+          </div>
+    </div>
+  </div>
+</main>
+
+</body>
+</html>

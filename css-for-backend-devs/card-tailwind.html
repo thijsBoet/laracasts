@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <title>card</title>
+
+<style>
+
+html, body{
+  height: 100%;
+  font-family:  'Open Sans', sans-serif;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,.12), 0 2px 4px 0 rgba(0,0,0,.08);
+  width: 475px;
+  height: 258px;
+}
+
+.card-left {
+  background: linear-gradient(to bottom, #21c8f6, #637bff);
+}
+
+.card-skill-button {
+  background: rgba(0,0,0,.4);
+  color: inherit;
+}
+
+.card-title > a {
+  color: inherit;
+}
+
+
+</style>
+
+</head>
+<body class="flex items-center justify-center">
+
+  <div class="card flex rounded">
+
+    <div class="card-left flex flex-col justify-between rounded p-6 items-center text-center text-white">
+
+      <a href="#" class="card-skill-button no-underline text-xs rounded-full py-1 px-6">PHP</a>
+
+      <img src="card.svg" alt="tooling">
+
+      <span class="card-difficulty text-sm">Intermediate difficulty</span>
+
+    </div>
+
+    <div class="card-right flex flex-col text-gray-700 p-6">
+      <h3 class="card-title text-gray-800 font-light text-3xl mt-0 mb-3"><a href="#" class="no-underline">Testing Jargon</a></h3>
+
+      <p class="card-excerpt flex-1">Odit exercitationem natus, tenetur dignissimos cupiditate quae eos praesentium id distinctio esse itaque, fugiat possimus consequuntur fugit!</p>
+
+      <div class="card-meta flex text-sm">
+
+        <div class="flex items-center mr-4">
+
+          <img class="mr-2" src="https://laracast.com/images/icons/books.svg">
+          5 lessons
+
+        </div>
+
+        <div class="flex items-center">
+
+          <img class="mr-2" src="https://laracast.com/images/icons/clock.svg">
+          53:11 min
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
