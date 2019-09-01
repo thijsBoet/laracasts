@@ -1,4 +1,4 @@
-<?php namespace Acne
+<?php namespace Acne;
 	
 interface RespondsToUserRegistration {
 	
