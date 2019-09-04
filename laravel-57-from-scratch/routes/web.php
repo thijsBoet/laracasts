@@ -25,9 +25,12 @@ NAMING CONVENTIONS GET, POST, PATCH/PUT AND DELETE METHODS LARAVEL
 
 Route::resource('projects', 'ProjectsController');
 
-// Route::get('/', 'PagesController@home');
-// Route::get('/about', 'PagesController@about');
-// Route::get('/contact', 'PagesController@contact');
+Route::get('/', 'PagesController@home');
+Route::get('/about', 'PagesController@about');
+Route::get('/contact', 'PagesController@contact');
+
+Route::post('/projects/{project}/tasks', 'ProjectTaskController@store');
+Route::patch('/tasks/{task}', 'ProjectTaskController@update');
 
 // Route::get('/projects', 'ProjectsController@index');
 // Route::get('/projects/create', 'ProjectsController@create');
