@@ -6,13 +6,7 @@
 
   <h1>Edit Project</h1>
 
-  @if($errors->any())
-    <div class="alert alert-danger" role="alert">
-      @foreach($errors->all() as $error)
-        <li>{{ $error }}</li>
-      @endforeach
-    </div>
-  @endif
+  @include('errors')
   
   <form method="POST" action="/projects/{{ $project->id }}">
     @method('PATCH')

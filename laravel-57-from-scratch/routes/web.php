@@ -1,5 +1,8 @@
 <?php
 
+use App\Repositories\UserRepository;
+use App\Services\Twitter;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,6 +28,18 @@ NAMING CONVENTIONS GET, POST, PATCH/PUT AND DELETE METHODS LARAVEL
 
 Route::resource('projects', 'ProjectsController');
 
+// Route::get('/', function(UserRepository $users){
+//     dd($users);
+
+//     return view('welcome');
+// });
+
+// Route::get('/', function(Twitter $twitter){
+//     dd($twitter);
+
+//     return view('welcome');
+// });
+
 Route::get('/', 'PagesController@home');
 Route::get('/about', 'PagesController@about');
 Route::get('/contact', 'PagesController@contact');
@@ -39,3 +54,7 @@ Route::patch('/tasks/{task}', 'ProjectTaskController@update');
 // Route::get('/projects/{project}/edit', 'PagesController@edit');
 // Route::patch('/projects/{project}', 'PagesController@update');
 // Route::delete('/projects/{project}', 'PagesController@destroy');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
