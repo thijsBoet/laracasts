@@ -5,7 +5,7 @@
 @section('content')
 
 <form method="POST" action="/projects/{{ $project->id }}">
-  {{ method_field('PATCH') }}
+  @method('PATCH')
   @csrf
   <div class="form-group">
     <label for="Title">Title</label>
