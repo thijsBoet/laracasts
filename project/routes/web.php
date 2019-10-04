@@ -1,4 +1,4 @@
-<?php
+'<?php
 
 /*
 |--------------------------------------------------------------------------
@@ -12,6 +12,8 @@
 */
 
 Route::resource('projects', 'ProjectsController');
+
+Route::patch('/tasks/{task}', 'ProjectTaskController@update');
 
 // Route::get('/projects', 'ProjectsController@index');
 // Route::post('/projects', 'ProjectsController@store');
