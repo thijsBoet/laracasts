@@ -13,6 +13,7 @@
 
 Route::resource('projects', 'ProjectsController');
 
+Route::post('projects/{project}/task', 'ProjectTaskController@store');
 Route::patch('/tasks/{task}', 'ProjectTaskController@update');
 
 // Route::get('/projects', 'ProjectsController@index');

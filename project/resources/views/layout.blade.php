@@ -10,13 +10,15 @@
     .is-complete {
       text-decoration: line-through;
     }
+    li {
+      list-style-type: circle;
+    }
   </style>
   <title>@yield('title')</title>
 </head>
 <body>
   
   <div class="container">
-    <h6 class="display-4 text-center">@yield('title')</h6>
     @yield('content')
   </div>
 

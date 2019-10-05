@@ -4,15 +4,11 @@
 
 @section('content')
 
-@if($errors->any())
-  <div class="alert alert-danger" role="alert">
-    <ul>
-      @foreach($errors->all() as $error)
-        <li>{{ $error }}</li>
-      @endforeach
-    </ul>
-  </div>
-@endif
+@include('inc.navbar')
+
+<h1 class="mb-4">Create New Project</h1>
+
+@include('errors')
 
 <form method="POST" action="/projects" >
   {{ method_field('POST') }}

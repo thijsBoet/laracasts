@@ -4,6 +4,10 @@
 
 @section('content')
 
+@include('inc.navbar')
+
+<h1 class="mb-4">Edit {{ $project->title }}</h1>
+
 <form method="POST" action="/projects/{{ $project->id }}">
   @method('PATCH')
   @csrf
