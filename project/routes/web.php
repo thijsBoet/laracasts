@@ -1,4 +1,4 @@
-'<?php
+<?php
 
 /*
 |--------------------------------------------------------------------------
@@ -10,6 +10,14 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use App\Services\Twitter;
+
+Route::get('/', function(Twitter $twitter){
+    dd($twitter);
+});
+
+
+// Route::get('/', 'ProjectsController@index');
 
 Route::resource('projects', 'ProjectsController');
 
