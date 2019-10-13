@@ -8,6 +8,10 @@ use \App\Project;
 
 class ProjectsController extends Controller
 {
+    public function __construct() {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -15,7 +19,7 @@ class ProjectsController extends Controller
      */
     public function index()
     {
-        $projects = \App\Project::all();
+        $projects = Project::where('owner_id', auth()->id())->get();
         
         return view('/projects.index', ['projects' => $projects]);
     }
@@ -38,12 +42,15 @@ class ProjectsController extends Controller
      */
     public function store(Request $request)
     {
-        Project::create(
-            request()->validate([
-                'title' => 'required',
-                'description' => 'required'
-            ])
-        );
+
+        $attributes = request()->validate([
+            'title' => 'required',
+            'description' => 'required'
+        ]);
+
+        $attributes['owner_id'] = auth()->id();
+
+        Project::create($attributes);
 
         return redirect('/projects');
     }
