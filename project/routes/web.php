@@ -12,12 +12,12 @@
 */
 use App\Services\Twitter;
 
-Route::get('/', function(Twitter $twitter){
-    dd($twitter);
-});
+// Route::get('/', function(Twitter $twitter){
+//     dd($twitter);
+// });
 
 
-// Route::get('/', 'ProjectsController@index');
+Route::get('/', 'ProjectsController@index');
 
 Route::resource('projects', 'ProjectsController');
 
