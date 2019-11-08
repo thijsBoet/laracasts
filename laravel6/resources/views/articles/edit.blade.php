@@ -9,7 +9,7 @@
 <div id="wrapper">
 	<div id="page" class="container">
     <h1 class="heading has-text-weight-bold is-size-4">Update Article</h1>
-
+    @include('errors')
     <form action="/articles/{{ $article->id }}" method="POST">
       @csrf
       @method('PUT')
@@ -19,15 +19,11 @@
         <div class="control">
         <input 
             type="text" 
-            class="input @error('title') is-danger @enderror" 
+            class="input" 
             name="title" 
             id="title" 
-            value="{{ old('title }}"
+            value="{{ $article->title }}"
             required>
-
-          @error('title')
-            <p class="help is-danger">{{ $errors->first('title') }}</p>
-          @enderror
         </div>
       </div>
 
@@ -38,12 +34,8 @@
         <textarea 
             name="excerpt" 
             id="excerpt" 
-            class="textarea @error('excerpt') is-danger @enderror" 
-            required>{{ old('excerpt') }}</textarea>
-
-          @error('excerpt')
-            <p class="help is-danger">{{ $errors->first('excerpt') }}</p>
-          @enderror
+            class="textarea" 
+            required>{{ $article->excerpt }}</textarea>
         </div>
       </div>
 
@@ -54,12 +46,8 @@
           <textarea 
               name="body" 
               id="body" 
-              class="textarea @error('body') is-danger @enderror" 
-              required>{{ old('body') }}</textarea>
-
-            @errors('body')
-              <p class="help is-danger">{{ $errors->first('body') }}</p>
-            @enderror
+              class="textarea" 
+              required>{{ $article->body }}</textarea>
         </div>
       </div>
 
