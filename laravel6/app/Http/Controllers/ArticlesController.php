@@ -9,7 +9,13 @@ class ArticlesController extends Controller
 {
     public function index()
     {
-        return view('articles.index', ['articles' => Article::latest()->get()]);
+        if(request('tag')){
+            $articles = Tag::where('name', request('tag'))->firstOrFail()->articles;
+        } else {
+            $articles = Article::first()->get();
+        }
+        
+        return view('articles.index', ['articles' => $articles]);
     }
 
     public function show(Article $article)
@@ -26,7 +32,7 @@ class ArticlesController extends Controller
     {
         Article::create($this->validateArticle());
 
-        return redirect('/articles');
+        return redirect(route('articles.index'));
     }
 
     public function edit(Article $article)
@@ -38,7 +44,7 @@ class ArticlesController extends Controller
     {
         $article->update($this->validateArticle());
 
-        return redirect('/articles/' . $article->id);
+        return redirect('articles.show', $article);
     }
 
     public function destroy()
